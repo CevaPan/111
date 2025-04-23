@@ -1,0 +1,32 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+int main() {
+    // Инициализация генератора случайных чисел
+    srand(time(0));
+    
+    int originalNumber;
+    int addNumber;
+    int subtractNumber;
+    int result;
+    
+    // Ввод исходного числа
+    std::cout << "Введите исходное число: ";
+    std::cin >> originalNumber;
+    
+    // Генерация случайных чисел для операций
+    addNumber = rand() % 10 + 1;  // случайное число от 1 до 10
+    subtractNumber = rand() % 10 + 1;  // случайное число от 1 до 10
+    
+    // Выполнение операций
+    result = originalNumber + addNumber - subtractNumber;
+    
+    // Вывод результатов
+    std::cout << "Исходное число: " << originalNumber << std::endl;
+    std::cout << "Прибавили число: " << addNumber << std::endl;
+    std::cout << "Вычли число: " << subtractNumber << std::endl;
+    std::cout << "Результат: " << result << std::endl;
+    
+    return 0;
+}
